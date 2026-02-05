@@ -1,25 +1,165 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import Location from "@/components/Location";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Andrade Pavimentações Gerais</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Location />
-        <Contact />
-      </main>
-      <Footer />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+
+    header {
+      background: linear-gradient(to right, #000000, #1a1a1a);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #f4b400;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f4b400;
+    }
+
+    .hero {
+      background: url("https://images.unsplash.com/photo-1590496793929-36417d3117cd") center/cover no-repeat;
+      padding: 120px 40px;
+      text-align: center;
+      background-blend-mode: overlay;
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      color: #f4b400;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      background-color: #f4b400;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    section {
+      padding: 60px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h3 {
+      color: #f4b400;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-left: 4px solid #f4b400;
+    }
+
+    footer {
+      background-color: #000;
+      padding: 40px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #f4b400;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Andrade Pavimentações</h1>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Pavimentação com qualidade e confiança</h2>
+    <p>Atendemos toda a região de São Paulo com soluções completas em pavimentação urbana e residencial.</p>
+
+    <div class="buttons">
+      <a href="https://wa.me/5511997626758" target="_blank">Fale no WhatsApp</a>
+      <a href="https://instagram.com/pavandradepavimentações" target="_blank">Instagram</a>
     </div>
-  );
-};
+  </div>
 
-export default Index;
+  <section id="servicos">
+    <h3>Nossos Serviços</h3>
+
+    <div class="services">
+      <div class="service">Pavimentação em geral</div>
+      <div class="service">Guias e sarjetas</div>
+      <div class="service">Caneletas</div>
+      <div class="service">Pisos intertravados</div>
+      <div class="service">Aplicação de grama</div>
+      <div class="service">Manutenção e reparos</div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h3>Contato</h3>
+    <p><strong>WhatsApp:</strong> (11) 99762-6758</p>
+    <p><strong>Email:</strong> pavpavimentacoesandrade@gmail.com</p>
+    <p><strong>Atendimento:</strong> Toda a região de São Paulo</p>
+    <p><strong>Horário:</strong> Segunda a sexta, das 8h às 17h</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Andrade Pavimentações Gerais</p>
+    <p>Siga no Instagram: <a href="https://instagram.com/pavandradepavimentações" target="_blank">@pavandradepavimentações</a></p>
+  </footer>
+
+</body>
+</html>
